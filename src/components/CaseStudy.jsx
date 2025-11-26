@@ -46,7 +46,7 @@ const CaseStudy = () => {
 
         <div>
           <Section title="Research Insights">
-            <p className="mb-2"><strong>Primary:</strong> User interviews reveal frustration with "context switching" between the timeline view and chat to find out why a task is red.</p>
+            <p className="mb-2"><strong>Primary:</strong> In my primary research, I examined interaction techniques that keep information accessible without overwhelming the interface. Techniques such as revealing contextual data on hover allow more information to stay on a single screen while still feeling lightweight. This approach helps present deeper details without forcing the user to navigate away, which supports faster understanding and better flow on the dashboard.</p>
             <p><strong>Secondary:</strong> Competitor analysis shows that tools like Jira or Asana often bury "blockers" in task details rather than surfacing them at a project level.</p>
           </Section>
 
