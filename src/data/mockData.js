@@ -7,16 +7,16 @@ export const projectData = {
     startDate: "2025-11-01",
     endDate: "2025-12-15",
     team: [
-        { id: 1, name: "Sarah K.", role: "Product", avatar: "SK", timezone: "America/New_York" },
-        { id: 2, name: "Mike R.", role: "Eng Lead", avatar: "MR", timezone: "Europe/London" },
-        { id: 3, name: "Jessica L.", role: "Design", avatar: "JL", timezone: "Asia/Tokyo" },
-        { id: 4, name: "David B.", role: "Marketing", avatar: "DB", timezone: "Australia/Sydney" },
+        { id: 1, name: "Amit Sharma", role: "Product", avatar: "AS", timezone: "Asia/Kolkata" },
+        { id: 2, name: "Priya Singh", role: "Eng Lead", avatar: "PS", timezone: "Asia/Kolkata" },
+        { id: 3, name: "Rohit Verma", role: "Design", avatar: "RV", timezone: "Asia/Kolkata" },
+        { id: 4, name: "Neha Patel", role: "Marketing", avatar: "NP", timezone: "Asia/Kolkata" },
     ],
     blockers: [
         {
             id: 101,
             title: "User Auth API",
-            owner: "Mike R.",
+            owner: "Priya Singh",
             blockedBy: "Pending Security Review",
             daysBlocked: 2,
             impact: "High",
@@ -26,7 +26,7 @@ export const projectData = {
         {
             id: 102,
             title: "Onboarding Assets",
-            owner: "Jessica L.",
+            owner: "Rohit Verma",
             blockedBy: "Waiting for Copy",
             daysBlocked: 1,
             impact: "Medium",
@@ -38,7 +38,7 @@ export const projectData = {
         {
             id: 201,
             title: "Push Notifications",
-            owner: "Mike R.",
+            owner: "Priya Singh",
             reason: "Scope creep",
             status: "Delayed",
             dueDate: "2025-11-28"
@@ -52,7 +52,7 @@ export const projectData = {
     activity: [
         {
             id: 301,
-            user: "Sarah K.",
+            user: "Amit Sharma",
             action: "commented on",
             target: "User Auth API",
             time: "2025-11-26T10:30:00Z",
@@ -60,11 +60,35 @@ export const projectData = {
         },
         {
             id: 302,
-            user: "David B.",
+            user: "Neha Patel",
             action: "updated",
             target: "Launch Plan",
             time: "2025-11-26T08:15:00Z",
             message: "Moved launch date to Dec 15 tentative."
+        },
+        {
+            id: 303,
+            user: "Rohit Verma",
+            action: "commented on",
+            target: "Onboarding Assets",
+            time: "2025-11-26T13:45:00Z",
+            message: "Waiting for copy from marketing."
+        },
+        {
+            id: 304,
+            user: "Priya Singh",
+            action: "updated",
+            target: "User Auth API",
+            time: "2025-11-26T15:10:00Z",
+            message: "Security review scheduled for tomorrow."
+        },
+        {
+            id: 305,
+            user: "Neha Patel",
+            action: "commented on",
+            target: "Launch Plan",
+            time: "2025-11-26T17:20:00Z",
+            message: "Marketing assets will be ready by Friday."
         }
     ]
 };

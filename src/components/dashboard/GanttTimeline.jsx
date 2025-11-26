@@ -1,4 +1,6 @@
 import React from 'react';
+// ...existing code...
+// (No changes needed for this file for the left Gantt stages)
 import { MoreHorizontal, Flame, Pin, RotateCcw } from 'lucide-react';
 
 export const GanttTimeline = () => {

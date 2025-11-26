@@ -5,6 +5,7 @@ import { BlockerCard } from './dashboard/BlockerCard';
 import { RiskCard } from './dashboard/RiskCard';
 import { ActivityFeed } from './dashboard/ActivityFeed';
 import { TeamPulse } from './dashboard/TeamPulse';
+import { GanttStages } from './dashboard/GanttStages';
 
 const Dashboard = () => {
     return (
@@ -30,6 +31,17 @@ const Dashboard = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Left Column: Critical Attention */}
                 <div className="lg:col-span-2 space-y-6">
+                    {/* Gantt Chart with Project Stages */}
+                    <section>
+                        <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                            Project Stages (Gantt Chart)
+                        </h3>
+                        <div className="mb-6">
+                            <GanttStages />
+                        </div>
+                    </section>
+
                     <section>
                         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
