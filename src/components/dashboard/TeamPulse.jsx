@@ -25,7 +25,7 @@ export const TeamPulse = ({ team }) => {
     return (
         <div className="glass-panel p-6 mt-6">
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                <Users size={18} className="text-indigo-400" />
+                <Users size={18} className="text-blue-400" />
                 Team Pulse & Availability
             </h3>
             <div className="flex gap-4 overflow-x-auto pb-2">
@@ -40,8 +40,8 @@ export const TeamPulse = ({ team }) => {
                         <span className="text-[10px] text-gray-500 mb-1">{member.role}</span>
 
                         <div className="flex items-center gap-1 bg-slate-200/50 px-2 py-1 rounded-full mt-1">
-                            <Clock size={10} className="text-indigo-500" />
-                            <span className="text-[10px] font-mono text-indigo-700 font-semibold">
+                            <Clock size={10} className="text-blue-500" />
+                            <span className="text-[10px] font-mono text-blue-700 font-semibold">
                                 {getLocalTime(member.timezone)}
                             </span>
                         </div>

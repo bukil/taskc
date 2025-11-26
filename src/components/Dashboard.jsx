@@ -15,7 +15,7 @@ const Dashboard = () => {
                     <p className="text-gray-400">Type project</p>
                 </div>
                 <div className="flex gap-3">
-                    <button className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium transition-colors shadow-lg shadow-indigo-500/20">
+                    <button className="px-4 py-2 bg-white hover:bg-blue-50 text-blue-600 border border-blue-200 text-sm font-medium transition-colors shadow-sm">
                         Generate Report
                     </button>
                 </div>

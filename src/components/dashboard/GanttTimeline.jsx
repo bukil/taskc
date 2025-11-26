@@ -133,39 +133,16 @@ export const UnifiedGantt = () => {
 
     return (
         <div className="bg-white border border-gray-200 shadow-sm mb-8 w-full">
-            {/* Top Header */}
-            <div className="bg-slate-50 border-b border-gray-200 px-4 py-3 md:px-6">
-                <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wide">1-14 January (14 Workdays)</h3>
-            </div>
-
             {/* Responsive Scroll Container */}
-            <div className="overflow-x-auto w-full">
-                <div className="min-w-[800px]"> {/* Minimum width to maintain layout integrity */}
+            <div className="w-full">
+                <div className="w-full"> {/* Minimum width to maintain layout integrity */}
                     <div className="flex divide-x divide-gray-200">
                         {/* Week 1 */}
                         <div className="flex-1">
-                            <div className="flex justify-between items-center px-4 py-3 border-b border-gray-200 bg-white sticky left-0">
-                                <span className="font-bold text-xs text-slate-800">WEEK 1</span>
-                                <span className="text-[10px] text-gray-400 font-medium">1-5 JAN</span>
-                            </div>
-                            <div className="grid grid-cols-5 divide-x divide-gray-100 border-b border-gray-200">
-                                {[1, 2, 3, 4, 5].map(d => (
-                                    <div key={d} className={`py-3 text-center text-xs font-medium ${d === 1 ? 'bg-gray-50/50' : 'text-slate-600'}`}>{d}</div>
-                                ))}
-                            </div>
                         </div>
 
                         {/* Week 2 */}
                         <div className="flex-1">
-                            <div className="flex justify-between items-center px-4 py-3 border-b border-gray-200 bg-white sticky left-0">
-                                <span className="font-bold text-xs text-slate-800">WEEK 2</span>
-                                <span className="text-[10px] text-gray-400 font-medium">1-5 JAN</span>
-                            </div>
-                            <div className="grid grid-cols-5 divide-x divide-gray-100 border-b border-gray-200">
-                                {[1, 2, 3, 4, 5].map(d => (
-                                    <div key={d} className={`py-3 text-center text-xs font-medium ${d === 5 ? 'bg-gray-50/50' : 'text-slate-600'}`}>{d}</div>
-                                ))}
-                            </div>
                         </div>
                     </div>
 
@@ -192,12 +169,7 @@ export const UnifiedGantt = () => {
                                 >
                                     <div className="h-full bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-2 md:p-3 flex flex-col justify-center gap-1 group cursor-pointer overflow-hidden">
                                         <div className="flex justify-between items-start gap-2">
-                                            <div className="flex items-center gap-2 min-w-0">
-                                                <span className="text-lg flex-shrink-0">{task.icon}</span>
-                                                <div className="min-w-0">
-                                                    <div className="text-xs font-bold text-slate-800 leading-tight truncate">{task.title}</div>
-                                                    <div className="text-[10px] text-gray-400 truncate">{task.detail}</div>
-                                                </div>
+                                            <div className="min-w-0">
                                             </div>
                                             <span className={`text-[9px] font-bold px-1.5 py-0.5 border ${task.statusBg} ${task.statusText} border-transparent bg-opacity-50 whitespace-nowrap flex-shrink-0`}>
                                                 {task.status}

@@ -32,15 +32,24 @@ export const HealthCard = ({ data }) => {
 
                 {/* Segmented Progress Bar */}
                 <div className="flex gap-1">
-                    {[...Array(20)].map((_, i) => {
-                        const isActive = (i / 20) * 100 < data.progress;
+                    {[...Array(10)].map((_, i) => {
+                        const isActive = (i / 10) * 100 < data.progress;
+                        const isLastActive = isActive && (((i + 1) / 10) * 100 >= data.progress);
+                        const isBlocked = data.blockers && data.blockers.length > 0;
+                        
+                        let barColor = 'bg-slate-700/50 border-slate-600';
+                        if (isActive) {
+                            if (isLastActive && isBlocked) {
+                                barColor = 'bg-rose-500 border-rose-400 shadow-[0_0_8px_rgba(225,29,72,0.6)]';
+                            } else {
+                                barColor = 'bg-emerald-500 border-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.6)]';
+                            }
+                        }
+
                         return (
                             <div
                                 key={i}
-                                className={`h-3 flex-1 rounded-sm transition-all duration-500 ${isActive
-                                        ? 'bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]'
-                                        : 'bg-slate-700/50'
-                                    }`}
+                                className={`h-3 flex-1 rounded-sm border transition-all duration-500 ${barColor}`}
                             />
                         );
                     })}
