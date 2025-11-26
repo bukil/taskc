@@ -33,7 +33,7 @@ export const BlockerCard = ({ item }) => {
                     </div>
                 </div>
 
-                <button className="text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
+                <button className="text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1 transition-opacity font-medium">
                     Resolve <ArrowRight size={14} />
                 </button>
             </div>
