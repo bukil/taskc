@@ -1,7 +1,12 @@
 import React from 'react';
 import { MessageSquare, GitCommit } from 'lucide-react';
 
-export const ActivityFeed = ({ activities }) => {
+export const ActivityFeed = ({ activities, team = [] }) => {
+    const getUserRole = (userName) => {
+        const member = team.find(m => m.name === userName);
+        return member ? member.role : '';
+    };
+
     return (
         <div className="glass-panel p-6 h-full">
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
@@ -9,12 +14,16 @@ export const ActivityFeed = ({ activities }) => {
                 Context & Updates
             </h3>
 
-            <div className="space-y-6 relative before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-700">
+            <div className="space-y-6">
                 {activities.map((act) => (
-                    <div key={act.id} className="relative pl-8">
-                        <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-slate-800 border-2 border-indigo-500 z-10"></div>
+                    <div key={act.id} className="relative">
                         <div className="flex justify-between items-baseline mb-1">
-                            <span className="text-sm font-medium text-indigo-300">{act.user}</span>
+                            <div className="flex items-center gap-2">
+                                <span className="text-sm font-medium text-indigo-300">{act.user}</span>
+                                <span className="text-xxs text-slate-500 bg-slate-800/50 px-3.7 py-0.5 rounded-full border border-slate-700/50">
+                                    {getUserRole(act.user)}
+                                </span>
+                            </div>
                             <span className="text-xs text-gray-500">{act.time}</span>
                         </div>
                         <p className="text-sm text-gray-300 mb-1">

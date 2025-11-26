@@ -15,7 +15,7 @@ const Dashboard = () => {
                     <p className="text-gray-400">Type project</p>
                 </div>
                 <div className="flex gap-3">
-                    <button className="px-4 py-2 bg-white hover:bg-blue-50 text-blue-600 border border-blue-200 text-sm font-medium transition-colors shadow-sm">
+                    <button className="px-4 py-2 bg-white hover:bg-blue-50 text-blue-600 border border-blue-200 text-sm font-medium transition-colors shadow-sm rounded-md">
                         Generate Report
                     </button>
                 </div>
@@ -56,8 +56,8 @@ const Dashboard = () => {
                 </div>
 
                 {/* Right Column: Context & Team */}
-                <div className="space-y-6">
-                    <ActivityFeed activities={projectData.activity} />
+                <div className="space-y-6 mt-10">
+                    <ActivityFeed activities={projectData.activity} team={projectData.team} />
                     <TeamPulse team={projectData.team} />
                 </div>
             </div>

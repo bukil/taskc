@@ -76,24 +76,24 @@ export const HealthCard = ({ data }) => {
                         }
 
                         // Determine tooltip position classes based on index
-                        let tooltipPositionClass = "left-1/2 transform -translate-x-1/2";
-                        let arrowPositionClass = "left-1/2 transform -translate-x-1/2";
+                        let tooltipClass = "tooltip-center";
+                        let arrowClass = "arrow-center";
                         
                         if (i === 0) {
-                            tooltipPositionClass = "left-0";
-                            arrowPositionClass = "left-4";
+                            tooltipClass = "tooltip-left";
+                            arrowClass = "arrow-left";
                         } else if (i === 5) {
-                            tooltipPositionClass = "right-0";
-                            arrowPositionClass = "right-4";
+                            tooltipClass = "tooltip-right";
+                            arrowClass = "arrow-right";
                         }
 
                         return (
                             <div
                                 key={i}
-                                className={`h-3 flex-1 rounded-md border transition-all duration-500 ${barColor} relative group cursor-help`}
+                                className={`h-3 flex-1 rounded-md border transition-all duration-500 ${barColor} relative group cursor-help hover:z-50`}
                             >
                                 {/* Frost Glass Tooltip */}
-                                <div className={`absolute bottom-full ${tooltipPositionClass} mb-6 w-64 p-4 rounded-xl opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none z-50`}
+                                <div className={`absolute bottom-full ${tooltipClass} mb-4 w-64 p-4 rounded-xl opacity-0 tooltip-anim group-hover:opacity-100 pointer-events-none z-50`}
                                      style={{
                                          background: 'rgba(255, 255, 255, 0.8)',
                                          backdropFilter: 'blur(12px)',
@@ -104,7 +104,7 @@ export const HealthCard = ({ data }) => {
                                      }}>
                                     {tooltipContent}
                                     {/* Arrow */}
-                                    <div className={`absolute top-full ${arrowPositionClass} border-8 border-transparent border-t-white/80`}></div>
+                                    <div className={`absolute top-full ${arrowClass} border-8 border-transparent border-t-white/80`}></div>
                                 </div>
                             </div>
                         );
