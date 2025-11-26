@@ -525,8 +525,13 @@ button {
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .border {
   border-width: 1px;
+  border-style: solid;
 }
 
 .border-2 {
@@ -565,12 +570,28 @@ button {
   border-color: var(--accent-danger);
 }
 
+.border-emerald-600 {
+  border-color: var(--accent-success);
+}
+
 .border-l-rose-500 {
   border-left-color: var(--accent-danger);
 }
 
 .border-l-amber-500 {
   border-left-color: var(--accent-warning);
+}
+
+.border-gray-300 {
+  border-color: #cbd5e1;
+}
+
+.border-gray-400 {
+  border-color: #9ca3af;
+}
+
+.border-gray-500 {
+  border-color: #6b7280;
 }
 
 .border-slate-900 {
@@ -782,4 +803,8 @@ button {
 /* Custom gradient for App bg */
 .app-bg-gradient {
   background: radial-gradient(ellipse at top, #1e293b, #0f172a, #000000);
+}
+
+.bg-green-400 {
+  background-color: #4ade80;
 }

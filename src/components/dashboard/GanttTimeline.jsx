@@ -136,7 +136,7 @@ export const UnifiedGantt = () => {
             {/* Responsive Scroll Container */}
             <div className="w-full">
                 <div className="w-full"> {/* Minimum width to maintain layout integrity */}
-                    <div className="flex divide-x divide-gray-200">
+                    <div className="flex">
                         {/* Week 1 */}
                         <div className="flex-1">
                         </div>
@@ -148,37 +148,9 @@ export const UnifiedGantt = () => {
 
                     {/* Task Grid Area */}
                     <div className="relative h-[320px] bg-white">
-                        {/* Background Columns */}
-                        <div className="absolute inset-0 grid grid-cols-10 divide-x divide-gray-50 pointer-events-none">
-                            {[...Array(10)].map((_, i) => (
-                                <div key={i} className={`h-full ${i === 0 || i === 9 ? 'bg-gray-50/30' : ''}`}></div>
-                            ))}
-                        </div>
+                        {/* Background Columns removed */}
 
-                        {/* Tasks */}
-                        <div className="absolute inset-0 py-4">
-                            {tasks.map((task) => (
-                                <div
-                                    key={task.id}
-                                    className="absolute h-14 px-1 transition-all hover:z-10"
-                                    style={{
-                                        left: `${(task.start / 10) * 100}%`,
-                                        width: `${(task.span / 10) * 100}%`,
-                                        top: `${task.row * 70 + 20}px`
-                                    }}
-                                >
-                                    <div className="h-full bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-2 md:p-3 flex flex-col justify-center gap-1 group cursor-pointer overflow-hidden">
-                                        <div className="flex justify-between items-start gap-2">
-                                            <div className="min-w-0">
-                                            </div>
-                                            <span className={`text-[9px] font-bold px-1.5 py-0.5 border ${task.statusBg} ${task.statusText} border-transparent bg-opacity-50 whitespace-nowrap flex-shrink-0`}>
-                                                {task.status}
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        {/* Tasks removed */}
                     </div>
                 </div>
             </div>
