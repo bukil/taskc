@@ -34,11 +34,13 @@ const CaseStudy = () => {
           </Section>
 
           <Section title="Assumptions & Hypotheses">
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Users don't want another tool; they want a better view of existing data.</li>
-              <li>"Why" something is blocked is often more important than "What" is blocked.</li>
-              <li>Visualizing dependencies (A waits for B) will reduce status meetings.</li>
-            </ul>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>A unified view of project health will reduce the need to jump between multiple screens.</li>
+                <li>Teams want immediate visibility into blockers, delays, and ownership without relying on project leads.</li>
+                <li>Clear contextual information (why something is blocked, who is involved, what changed) will reduce friction in remote communication.</li>
+                <li>Lightweight visual cues and summaries can help users understand the overall state of the project faster than reading activity logs.</li>
+                <li>Providing a single screen for critical status information improves team alignment during asynchronous work.</li>
+              </ul>
           </Section>
         </div>
 
