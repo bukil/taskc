@@ -1,0 +1,69 @@
+import React from 'react';
+import { projectData } from '../data/mockData';
+import { HealthCard } from './dashboard/HealthCard';
+import { Timeline } from './dashboard/Timeline';
+import { BlockerCard } from './dashboard/BlockerCard';
+import { RiskCard } from './dashboard/RiskCard';
+import { ActivityFeed } from './dashboard/ActivityFeed';
+import { TeamPulse } from './dashboard/TeamPulse';
+
+const Dashboard = () => {
+    return (
+        <div className="max-w-6xl mx-auto p-6 animate-fade-in">
+            <header className="mb-8 flex justify-between items-end">
+                <div>
+                    <h1 className="text-3xl font-bold text-white mb-1">Project Pulse</h1>
+                    <p className="text-gray-400">Unified view for <span className="text-indigo-400 font-medium">{projectData.name}</span></p>
+                </div>
+                <div className="flex gap-3">
+                    <button className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium transition-colors shadow-lg shadow-indigo-500/20">
+                        Generate Report
+                    </button>
+                </div>
+            </header>
+
+            <HealthCard data={projectData} />
+
+            <div className="mb-6">
+                <Timeline data={projectData} />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {/* Left Column: Critical Attention */}
+                <div className="lg:col-span-2 space-y-6">
+                    <section>
+                        <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                            Critical Blockers
+                        </h3>
+                        <div className="space-y-4">
+                            {projectData.blockers.map(item => (
+                                <BlockerCard key={item.id} item={item} />
+                            ))}
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-amber-500"></span>
+                            At Risk / Delayed
+                        </h3>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            {projectData.risks.map(item => (
+                                <RiskCard key={item.id} item={item} />
+                            ))}
+                        </div>
+                    </section>
+                </div>
+
+                {/* Right Column: Context & Team */}
+                <div className="space-y-6">
+                    <ActivityFeed activities={projectData.activity} />
+                    <TeamPulse team={projectData.team} />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Dashboard;
